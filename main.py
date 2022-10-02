@@ -1,7 +1,8 @@
 import re
-from urllib import response
 import tweepy
+import datetime
 
+from urllib import response
 from credentials import access_token, access_token_secret, api_key, api_key_secret
 
 client = tweepy.Client(
@@ -12,14 +13,20 @@ client = tweepy.Client(
 )
 
 
-def create_tweet(string : str):
+def create_tweet():
 
-    response = client.create_tweet(text=string)
+    word_cup_startdate = datetime.date(2022, 11, 20)
+
+    days_remaining = word_cup_startdate - datetime.date.today()
+
+    date = str(days_remaining)
+
+    response = client.create_tweet(text=f"¡Faltan {date[0:7]} para el Mundial de Qatar!")
 
     return response
 
 
-#print(create_tweet(input("Enter a Tweet you want to post: ")))
+print(create_tweet())
 
 
 def delete_tweet(id : str):
@@ -33,4 +40,4 @@ def delete_tweet(id : str):
 
     return delete
 
-print(delete_tweet("1576603698792435712"))
+#print(delete_tweet("1576603698792435712"))
