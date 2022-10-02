@@ -8,3 +8,4 @@
 - Keep working with Datetime Library
 - Post tweets from Python Script
 - Automate workflow
+- Work with Tweepy Library
