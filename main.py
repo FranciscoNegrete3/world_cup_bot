@@ -12,14 +12,25 @@ client = tweepy.Client(
 )
 
 
-def create_tweet(string: str):
+def create_tweet(string : str):
 
     response = client.create_tweet(text=string)
 
     return response
 
 
-print(create_tweet(input("Enter a Tweet you want to post: ")))
+#print(create_tweet(input("Enter a Tweet you want to post: ")))
 
 
-print("Hola")
+def delete_tweet(id : str):
+
+    """
+    This function takes as a parameter a Twit's ID (string), which can be
+    found selecting an specifyc tweet. See Steps for more details.
+    """
+
+    delete = client.delete_tweet(id)
+
+    return delete
+
+print(delete_tweet("1576603698792435712"))
