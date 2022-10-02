@@ -21,7 +21,7 @@ def create_tweet():
 
     date = str(days_remaining)
 
-    response = client.create_tweet(text=f"¡Faltan {date[0:7]} para el Mundial de Qatar!")
+    response = client.create_tweet(text=f"¡Faltan {date[0:2]} días para el Mundial de Qatar!")
 
     return response
 
