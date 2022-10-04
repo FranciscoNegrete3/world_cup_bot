@@ -1,0 +1,1 @@
+"C:\Python38" "C:\Users\frann\Desktop\Twitter Bot\main.py\"
